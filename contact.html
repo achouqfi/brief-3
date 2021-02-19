@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <style>
+        .errors
+        {
+            height: 19px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- menu -->
+    <script>
+        function validateForm() 
+        {
+            var name = document.getElementById("name");
+            var subject = document.getElementById("subject");
+            var phone = document.getElementById("phone");
+            var email = document.getElementById("email");
+            var message = document.getElementById("message");
+            var mailformat = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
+            var nameVer = /^[a-zA-Z\s]+$/;
+            var phoneno = /^\d{10}$/;
+            var i=0;
+            
+            
+            if(name.value == "" )
+            {
+                document.getElementById('mName').innerHTML = "saisir  votre nom";
+            }else if (name.value.match(nameVer)){
+                document.getElementById('mName').innerHTML = "";
+                i++;
+            }else{
+                document.getElementById('mName').innerHTML = "nom incorrect"
+            }
+
+            if(email.value == "" )
+            {
+                document.getElementById('mEmail').innerHTML = "saisir votre email";
+            }else if(email.value.match(mailformat)){
+                document.getElementById('mEmail').innerHTML = "";
+                i++;
+            }else{
+                document.getElementById('mEmail').innerHTML = "completé votre email"
+            }
+    
+            if(phone.value == "" )
+            {
+                document.getElementById('mPhone').innerHTML = "saisir votre numero ";
+            }else if((phone.value.match(phoneno))){
+                document.getElementById('mPhone').innerHTML = "";
+                i++;
+            }else {
+                document.getElementById('mPhone').innerHTML = "saisir des numeros"
+            }
+
+
+            if(subject.value == "" )
+            {
+                document.getElementById('mSujet').innerHTML = "saisir le sujet ";
+            }else {
+                document.getElementById('mSujet').innerHTML = "";
+                i++;
+            }
+
+
+            if(message.value == "" )
+            {
+                document.getElementById('mMessage').innerHTML = "taper votre message";
+            }else if (message.value.length >= 250){
+                document.getElementById('mMessage').innerHTML = ""; 
+                i++; 
+            }else{
+                document.getElementById('mMessage').innerHTML = "characters doit etre superieur a 250";
+            }
+            
+            if (i>=5){
+                alert('votre message a été envoyer');
+                message.value = "";
+                subject.value = "";
+                phone.value = "";
+                email.value = "";
+                name.value = "";
+            }
+
+        }
+    </script>
+
+    <div class="menu-bar" >
+        <div class="logo">
+            <img src="/image/logo.png" height="42px" width="190px">
+        </div>
+        <div class="menu">
+            <lu class="menu-list" >
+                <li><a  href="index.html">Accueil</a></li>
+                <li><a href="gallerie.html">Gallerie</a></li>
+                <li><a href="reservation.html">Réservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </lu>
+        </div>
+    </div>
+
+    <!-- home page -->
+
+    <div class="tittle">
+        <h1>CONTACT</h1>
+    </div>
+    <div  style="background-color: black; " f >
+		<div class="contact1" style="padding-top: 5%;">
+            <div>
+			    <input id="name" type="text" placeholder="nom*" >
+                <div id="mName" class="errors"> </div>
+            </div>
+            <div>
+			    <input id="email" type="email" placeholder="email*" required>
+                <div id="mEmail" class="errors"> </div>
+            </div>
+		</div>
+		<div class="contact1">
+            <div>
+			    <input id="phone" placeholder="telephone*">
+                <div id="mPhone" class="errors"> </div>
+            </div>
+			<div>
+                <input id="subject" placeholder="sujet*">
+                <div id="mSujet" class="errors">  </div>
+
+            </div>
+		</div>
+		<div class="contact3">
+            <div>
+			<textarea placeholder="Message*" id="message"></textarea>
+            <div id="mMessage" class="errors">  </div>
+            </div>
+		</div>
+        <div class="evy">
+            <button onclick="validateForm()">Envoyer</button>
+        </div> 
+	</div>
+
+
+    <!--  footer  -->
+
+    <div class="footer">
+        <div class="icon-sm">
+        <div class="sm">
+            <h3>Restons connectés </h3>
+        </div>
+        <ul class="icon">
+            <li> <a href="#"><img src="icon/facebook.png"></a></li>
+            <li> <a href="#"><img src="icon/Twitter.png"></a></li>
+            <li> <a href="#"><img src="icon/linkedin.png"></a></li>
+            <li> <a href="#"><img src="icon/instagram.png"></a></li>
+        </ul>
+        </div>
+        <div class="espace-mail">
+        <div class="Follow">
+            <h3>Souscrire à notre Newsletter</h3>
+        </div>
+        <div class="New">
+        <input class="Newsletter" placeholder="Saisir votre email" type="Saisir votre email">
+        <button class="Subscribe">Envoyer</button>
+        </div>
+        </div>
+        <div class="contact">
+            <div class="contact-icon">
+                <img src="/icon/phone-call.png" height="40px" width="25px">
+                <h2 style="width: 200px;  color: white;" >+212 6 55 66 77 88</h2>
+            </div>
+        </div>
+    </div>  
+
+</body>
+</html>
