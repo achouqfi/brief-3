@@ -8,159 +8,163 @@
     <link rel="stylesheet" href="/style/main.css">
     <script>
         var  btv=0;
-var carb=0;
-var prv=0;
-function Reservation_moto() {
-    document.getElementById("Hybride").style="display:none";
-    document.getElementById("hybr").style="display:none";
-    document.getElementById("Diesel").style="display:none";
-    document.getElementById("diesel").style="display:none";
-    document.getElementById("Electrique").style="display:visible";
-    document.getElementById("elec").style="display:visible";
-    document.getElementById("Essence").style="display:visible";
-    document.getElementById("essence").style="display:visible";
-    prv=10;
-}
-
-function Reservation_citadine(){
-    document.getElementById("Automatique").style="display:none";
-    document.getElementById("auto").style="display:none";
-    document.getElementById("auto_manu").style="display:visible";
-    document.getElementById("Hybride").style="display:visible";
-    document.getElementById("hybr").style="display:visible";
-    document.getElementById("Diesel").style="display:visible";
-    document.getElementById("diesel").style="display:visible";
-    document.getElementById("Electrique").style="display:visible";
-    document.getElementById("elec").style="display:visible";
-    document.getElementById("Essence").style="display:visible";
-     document.getElementById("essence").style="display:visible";
-
-    prv=12;
-
-}
-function Reservation_compact(){
-    document.getElementById("Hybride").style="display:visible";
-     document.getElementById("hybr").style="display:visible";
-    document.getElementById("Essence").style="display:visible";
-     document.getElementById("essence").style="display:visible";
-     document.getElementById("Diesel").style="display:visible";
-     document.getElementById("diesel").style="display:visible";
-    document.getElementById("Electrique").style="display:none";
-    document.getElementById("elec").style="display:none";
-    document.getElementById("Automatique").style="display:none";
-    document.getElementById("auto").style="display:none";
-    document.getElementById("auto_manu").style="display:visible";
-
+        var carb=0;
+        var prv=0;
     
-    prv=14;
 
-}
-function Reservation_berline(){
-     document.getElementById("Hybride").style="display:visible";
-     document.getElementById("hybr").style="display:visible";
-    document.getElementById("Essence").style="display:visible";
-     document.getElementById("essence").style="display:visible";
-     document.getElementById("Diesel").style="display:visible";
-     document.getElementById("diesel").style="display:visible";
-    document.getElementById("Electrique").style="display:none";
-    document.getElementById("elec").style="display:none";
-    document.getElementById("Manuelle").style="display:none";
-     document.getElementById("manuelle").style="display:none";
-     document.getElementById("auto_manu").style="display:visible";
-     document.getElementById("Automatique").style="display:visible";
-    document.getElementById("auto").style="display:visible";
+    function citadine(){
+        document.getElementById("Automatique").style="display:none";
+        document.getElementById("auto").style="display:none";
+        document.getElementById("Hybride").style="display:visible";
+        document.getElementById("hybr").style="display:visible";
+        document.getElementById("Diesel").style="display:visible";
+        document.getElementById("diesel").style="display:visible";
+        document.getElementById("Electrique").style="display:visible";
+        document.getElementById("elec").style="display:visible";
+        document.getElementById("Essence").style="display:visible";
+        document.getElementById("essence").style="display:visible";
+        document.getElementById("manuelle").style="display:visible";
+        document.getElementById("Manuelle").style="display:visible";
 
-     prv=20;
+        prv=12;
 
-}
-function Reservation_utilitaire(){
-    document.getElementById("Electrique").style="display:none";
-    document.getElementById("elec").style="display:none";
-    document.getElementById("Hybride").style="display:none";
-    document.getElementById("hybr").style="display:none";
-    document.getElementById("Essence").style="display:none";
-    document.getElementById("essence").style="display:none";
-    document.getElementById("Automatique").style="display:none";
-    document.getElementById("auto").style="display:none";
-    document.getElementById("auto_manu").style="display:visible";
-    document.getElementById("Diesel").style="display:visible";
-     document.getElementById("diesel").style="display:visible";
-     document.getElementById("Manuelle").style="display:visible";
-     document.getElementById("manuelle").style="display:visible";
+    }
+    function compact(){
+        document.getElementById("Hybride").style="display:visible";
+        document.getElementById("hybr").style="display:visible";
+        document.getElementById("Essence").style="display:visible";
+        document.getElementById("essence").style="display:visible";
+        document.getElementById("Diesel").style="display:visible";
+        document.getElementById("diesel").style="display:visible";
+        document.getElementById("Electrique").style="display:none";
+        document.getElementById("elec").style="display:none";
+        document.getElementById("manuelle").style="display:visible";
+        document.getElementById("Manuelle").style="display:visible";
+        document.getElementById("Automatique").style="display:none";
+        document.getElementById("auto").style="display:none";
 
-    prv=16;
+        
+        prv=14;
 
-}
-function Reservation_engin_de_chantier(){
-    document.getElementById("Electrique").style="display:none";
-    document.getElementById("elec").style="display:none";
-    document.getElementById("Hybride").style="display:none";
-    document.getElementById("hybr").style="display:none";
-    document.getElementById("Automatique").style="display:none";
-    document.getElementById("auto").style="display:none";
-    document.getElementById("auto_manu").style="display:visible";
-    document.getElementById("Diesel").style="display:visible";
-     document.getElementById("diesel").style="display:visible";
-     document.getElementById("Manuelle").style="display:visible";
-    document.getElementById("manuelle").style="display:visible";
-    document.getElementById("Essence").style="display:visible";
-     document.getElementById("essence").style="display:visible";
+    }
+    function berline(){
+        document.getElementById("Hybride").style="display:visible";
+        document.getElementById("hybr").style="display:visible";
+        document.getElementById("Essence").style="display:visible";
+        document.getElementById("essence").style="display:visible";
+        document.getElementById("Diesel").style="display:visible";
+        document.getElementById("diesel").style="display:visible";
+        document.getElementById("Electrique").style="display:none";
+        document.getElementById("elec").style="display:none";
+        document.getElementById("Manuelle").style="display:none";
+        document.getElementById("manuelle").style="display:none";
+        document.getElementById("Automatique").style="display:visible";
+        document.getElementById("auto").style="display:visible";
 
-    prv=900;
+        prv=20;
 
-}
-function Reservation_camion(){
-    document.getElementById("Electrique").style="display:none";
-    document.getElementById("elec").style="display:none";
-    document.getElementById("Hybride").style="display:none";
-    document.getElementById("Essence").style="display:none";
-    document.getElementById("essence").style="display:none";
-    document.getElementById("Manuelle").style="display:none";
-    document.getElementById("manuelle").style="display:none";
-    document.getElementById("auto_manu").style="display:visible";
-    document.getElementById("Diesel").style="display:visible";
-     document.getElementById("diesel").style="display:visible";
-     document.getElementById("Automatique").style="display:visible";
-    document.getElementById("auto").style="display:visible";
+    }
+    function utilitaire(){
+        document.getElementById("Electrique").style="display:none";
+        document.getElementById("elec").style="display:none";
+        document.getElementById("Hybride").style="display:none";
+        document.getElementById("hybr").style="display:none";
+        document.getElementById("Essence").style="display:none";
+        document.getElementById("essence").style="display:none";
+        document.getElementById("Automatique").style="display:none";
+        document.getElementById("auto").style="display:none";
+        document.getElementById("Diesel").style="display:visible";
+        document.getElementById("diesel").style="display:visible";
+        document.getElementById("Manuelle").style="display:visible";
+        document.getElementById("manuelle").style="display:visible";
 
-    prv=250;
-}
+        prv=16;
+
+    }
+    function engin_de_chantier(){
+        document.getElementById("Electrique").style="display:none";
+        document.getElementById("elec").style="display:none";
+        document.getElementById("Hybride").style="display:none";
+        document.getElementById("hybr").style="display:none";
+        document.getElementById("Automatique").style="display:none";
+        document.getElementById("auto").style="display:none";
+        document.getElementById("Diesel").style="display:visible";
+        document.getElementById("diesel").style="display:visible";
+        document.getElementById("Manuelle").style="display:visible";
+        document.getElementById("manuelle").style="display:visible";
+        document.getElementById("Essence").style="display:visible";
+        document.getElementById("essence").style="display:visible";
+
+        prv=900;
+
+    }
+    function camion(){
+        document.getElementById("Electrique").style="display:none";
+        document.getElementById("elec").style="display:none";
+        document.getElementById("Hybride").style="display:none";
+        document.getElementById("Essence").style="display:none";
+        document.getElementById("essence").style="display:none";
+        document.getElementById("Manuelle").style="display:none";
+        document.getElementById("manuelle").style="display:none";
+        document.getElementById("Diesel").style="display:visible";
+        document.getElementById("diesel").style="display:visible";
+        document.getElementById("Automatique").style="display:visible";
+        document.getElementById("auto").style="display:visible";
+
+        prv=250;
+    }
+    function moto() {
+        document.getElementById("Hybride").style="display:none";
+        document.getElementById("hybr").style="display:none";
+        document.getElementById("Diesel").style="display:none";
+        document.getElementById("diesel").style="display:none";
+        document.getElementById("Electrique").style="display:visible";
+        document.getElementById("elec").style="display:visible";
+        document.getElementById("Essence").style="display:visible";
+        document.getElementById("essence").style="display:visible";
+        document.getElementById("Automatique").style="display:none";
+        document.getElementById("auto").style="display:none";
+        document.getElementById("Manuelle").style="display:none";
+        document.getElementById("manuelle").style="display:none";
+        prv=10;
+    }
 
 
-function calcul() {
-if(prv==0){
-alert('selectionner un type');
-}
+    function calcul() {
+        if(prv==0){
+            alert('remplir le formilaire');
+        }
 
-var dr=document.getElementById('dr').value;
-var i=0;
-var tabC=[5,9,14,21];
-var tabv=[1,19];
-var tabp=[10,12,14,20,16,900,250];
-var rates = document.getElementsByName('gender');
-var btvs = document.getElementsByName('bv');
-var rate_value=-1;
-var bv_value=-1;
-var prixv_value;
-for(i = 0; i < rates.length; i++){
-    if(rates[i].checked){
-        rate_value = i;
-}
-}
-    if(rate_value!=-1)
- carb=tabC[rate_value];
-for(i = 0; i < btvs.length; i++){
-    if(btvs[i].checked){
-        bv_value = i;
-}
-}
-if(bv_value!=-1)
-btv=tabv[bv_value];
-var prixtotale= (prv +carb*100/prv  + btv*100/prv)*dr;
-document.getElementById("prix").innerHTML=prixtotale;
+        var dr=document.getElementById('dr').value;
+        var i=0;
+        var tabC=[5,9,14,21];
+        var tabv=[1,19];
+        var tabp=[10,12,14,20,16,900,250];
+        var rates = document.getElementsByName('gender');
+        var btvs = document.getElementsByName('bv');
+        var rate_value=-1;
+        var bv_value=-1;
+        var prixv_value;
+        
+        for(i = 0; i < rates.length; i++){
+            if(rates[i].checked){
+                rate_value = i;
+            }
+        }
+            if(rate_value!=-1)
+        carb=tabC[rate_value];
+        for(i = 0; i < btvs.length; i++){
+            if(btvs[i].checked){
+                bv_value = i;
+            }
+        }
+        if(bv_value!=-1)
+        btv=tabv[bv_value];
+        var prixtotale= (prv +carb*100/prv  + btv*100/prv)*dr;
+        var v = prixtotale.toFixed(2);
+        document.getElementById("prix").innerHTML=v;
+        }
 
-
-}
     </script>
 </head>
 <body>
@@ -181,57 +185,60 @@ document.getElementById("prix").innerHTML=prixtotale;
     </div>
 
 <!--  Reservation  -->
-   
 
-		<h2>Reservation</h2>
-		<div class="container">
-            <div class="t-types" style="display: flex; overflow-x: scroll; height: 200px;">
-            
-                <img class="image" onclick="Reservation_moto()" src="/image/APRILIA (1).png" >
-            
-                <img class="image" onclick="Reservation_citadine()" src="/image/Citroën-C3.png" alt="type1">
-            
-                <img class="image" onclick="Reservation_compact()" src="/image/Renault-Mégane.jpg" alt="type1">
-            
-                <img class="image" onclick="Reservation_berline()" src="/image/Hyundai-Elantra.png" alt="type1">
-            
-                <img class="image" onclick="Reservation_utilitaire()" src="/image/Fiat-Ducato.jpg" alt="type1">
-            
-                <img class="image " onclick="Reservation_engin_de_chantier()" src="/image/raboteuse.png" alt="type1">
-            
-                <img class="image " onclick="Reservation_camion()" src="/image/camion-mitsubishi.jpg" alt="type1">
-            
-            </div>
-        
+    <h2 class="tit" style="margin-top: 10px;">TYPE</h2>
+        <div class="type"  > 
+            <img class="img-" onclick="citadine()" src="/image/Citroën-C3.png" >         
+            <img class="img-" onclick="compact()" src="/image/Renault-Mégane.jpg" > 
+            <img class="img-" onclick="berline()" src="/image/Hyundai-Elantra.png" >    
+            <img class="img-" onclick="utilitaire()" src="/image/Fiat-Ducato.jpg" >       
+            <img class="img- " onclick="engin_de_chantier()" src="/image/raboteuse.png" >
+            <img class="img- " onclick="camion()" src="/image/camion-mitsubishi.jpg">
+            <img class="img-" onclick="moto()" src="/image/APRILIA (1).png" > 
+        </div>
 
-            <div class="flex">
-                <h3 class="reserv">Reserve</h3>
-                <form class="forme1" >
-                    <div class="input" >
-                        <input type="radio" id="Electrique" name="gender" value="Electrique">
-                        <label for="male" id="elec">Electrique</label>
-                        <input type="radio" id="Hybride" name="gender" value="Hybride">
-                        <label for="female" id="hybr">Hybride</label>
-                        <input type="radio" id="Essence" name="gender" value="Essence">
-                        <label for="other" id="essence">Essence</label>
-                        <input type="radio" id="Diesel" name="gender" value="Diesel">
-                        <label for="other" id="diesel">Diesel</label>
-                    </div>
-                </form>
-
-                <form class="forme2"  >
-                    <input type="radio" id="Manuelle" name="bv" value="Manuelle">
-                    <label for="age1" id="manuelle">Manuelle</label>
-                    <input type="radio" id="Automatique" name="bv" value="19">
-                    <label for="age2" id="auto">Automatique</label><br />
-                </form>
+        <div class="flex">
+            <h3 class="tittle">CARBURANT</h3>
+            <form class="selec" >
+                <div class="rselect">
+                    <input type="radio" id="Electrique" name="gender" value="Electrique">
+                    <label id="elec">Electrique</label>
                 </div>
-                <input class="jour" type="number" name="" min="1" value="number" id="dr">
-                <label for="age2">Number of Day</label>
-                <label>total price :</label>
-                <label id="prix"></label>
+                    <div class="rselect">
+                    <input type="radio" id="Hybride" name="gender" value="Hybride">
+                    <label  id="hybr">Hybride</label>
+                </div>
+                <div class="rselect">
+                    <input type="radio" id="Essence" name="gender" value="Essence">
+                    <label  id="essence">Essence</label>
+                </div>
+                <div class="rselect">
+                    <input type="radio" id="Diesel" name="gender" value="Diesel">
+                    <label  id="diesel">Diesel</label>
+                </div>
+            </form>
+        </div>
 
-                <input class="btn" type="submit" value="Reservation Now" onclick="calcul()">
+        <div>
+            <h3 class="tittle">BOITE A VITESSE</h3>
+            <form class="selec1"  >
+                <div class="rselect">
+                <input type="radio" id="Manuelle" name="bv" value="Manuelle">
+                <label id="manuelle">Manuelle</label>
+                </div>
+                <div class="rselect">
+                <input type="radio" id="Automatique" name="bv" value="19">
+                <label  id="auto">Automatique</label><br />
+                </div>
+            </form> 
+        </div>
+        <h3 class="tittle">LA DUREE</h3>
+         <div class="final-prix">
+            <input class="jour" type="number" min="1" value="number" id="dr">
+            <input class="Estimation" type="submit" value="Reserver" onclick="calcul()">
+            <label id="prix"></label>
+            <label>LE PRIX ESTIMER EST  :</label>
+            
 
         </div>
 
@@ -259,12 +266,7 @@ document.getElementById("prix").innerHTML=prixtotale;
         <button class="Subscribe">Envoyer</button>
         </div>
         </div>
-        <div class="contact">
-            <div class="contact-icon">
-                <img src="/icon/phone-call.png" height="40px" width="25px">
-                <h2 style="width: 200px;  color: white;" >+212 6 55 66 77 88</h2>
-            </div>
-        </div>
+ 
     </div>  
 </body>
 </html>
