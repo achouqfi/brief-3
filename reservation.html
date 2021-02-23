@@ -32,6 +32,7 @@
             prix_vehicule = 12;
 
         }
+
         function compact() {
             document.getElementById("Hybride").style = "display:visible";
             document.getElementById("hybr").style = "display:visible";
@@ -139,6 +140,9 @@
                 alert('remplir le formilaire');
             }
 
+            
+            else{
+
             var jour = document.getElementById('dr').value;
             var i = 0;
             var taux_carburant = [5, 9, 14, 21];
@@ -157,6 +161,7 @@
 
             if (rate_value != -1)
                 carb = taux_carburant[rate_value];
+
             for (i = 0; i < BAV.length; i++) {
                 if (BAV[i].checked) {
                     bv_value = i;
@@ -165,9 +170,10 @@
             
             if (bv_value != -1)
                 btv = taux_[bv_value];
+
                 var prixtotale = ((carb + btv ) * (jour * prix_vehicule))/100 + ( jour * prix_vehicule );
                 var v = prixtotale.toFixed(2);
-                document.getElementById("prix").innerHTML = "LE PRIX ESTIMER EST  : " + v + " Euro";
+                document.getElementById("prix").innerHTML = "LE PRIX ESTIMER EST  : " + v + " Euro";}
         }
 
     </script>
